@@ -1,7 +1,32 @@
-<h1>Demo componente básico</h1>
-<div class="alert" 
-    [ngClass]="{'alert-danger': tipoMensaje === 'error', 'alert-primary': tipoMensaje === 'normal'}" role="alert">
+<h1>{{title}}</h1>
+<div class="alert alert-dismissible fade show" 
+[ngClass]="{'alert-danger': tipoMensaje === 'error', 'alert-primary': tipoMensaje === 'normal'}" 
+role="alert">
     Mensaje
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
 </div>
+
+<app-login (login)="onLogin($event)"></app-login>
+
+<table>
+    <tr>
+        <td colspan="10"><input type="number" value="{{display}}" /></td>
+    </tr>
+    <tr>
+        <td 
+        *ngFor="let numero of [0,1,2,3,4,5,6,7,8,9]"
+        (click)="numeroPulsado(+$event.target.innerText)"
+        >
+            <button>{{numero}}</button>
+        </td>
+    </tr>
+</table>
+
+<form action="#">
+<button [disabled]="!isBotonHabilitado" (click)="botonPulsado($event)">Ver evento</button>
+</form>
+
 <app-usuario [usuario]="usuarioInicial"></app-usuario>
 <app-hola></app-hola>

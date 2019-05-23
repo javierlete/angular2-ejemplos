@@ -7,13 +7,30 @@ import { Usuario } from './usuario';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'pruebas';
+  title = 'pruebas <script>alert("hola");</script>';
 
-  tipoMensaje = 'normal';
+  display = '';
+
+  isBotonHabilitado = true;
+  tipoMensaje = 'error';
 
   usuarioInicial: Usuario = {
     email: 'inicial',
     password: 'inicial',
     fechaAlta: new Date()
   };
+
+  botonPulsado(evento: MouseEvent): void {
+    evento.preventDefault();
+    console.log(evento.offsetX, evento.offsetY);
+    this.isBotonHabilitado = false;
+  }
+
+  numeroPulsado(numero: number): void {
+    this.display += '' + numero;
+  }
+
+  onLogin(usuario: Usuario): void {
+    console.log('APP COMPONENT', usuario);
+  }
 }

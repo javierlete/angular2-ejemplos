@@ -8,13 +8,17 @@ import { AppComponent } from './app.component';
 import { HolaComponent } from './hola.component';
 import { UsuarioComponent } from './usuario.component';
 import { BotonComponent } from './boton.component';
+import { LineaFormularioComponent } from './linea-formulario.component';
+import { LoginComponent } from './login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HolaComponent,
     UsuarioComponent,
-    BotonComponent
+    BotonComponent,
+    LineaFormularioComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

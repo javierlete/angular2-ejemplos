@@ -5,6 +5,7 @@
 <div class="form-group">
     <input class="form-control" type="password" [(ngModel)]="usuario.password" />
 </div>
+<app-linea-formulario [id]="'fecha'" [tipo]="'date'" [texto]="'Fecha de nacimiento'" (change)="console.log('cambiado')"></app-linea-formulario>
 <span>{{usuario.fechaAlta | date:'dd-MM-yyyy'}}</span>
 <button class="btn btn-primary" (click)="verUsuario()" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Ver usuario</button>
 
