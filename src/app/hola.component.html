@@ -1,0 +1,14 @@
+<h1 #titulo>Hola que tal estás</h1>
+<button (click)="mostrarTitulo(titulo.innerText)">Mostrar título</button>
+<p>{{desdeComponenteADom}}</p>
+<input type="text" #nombre />
+<button (click)="mostrarSaludo(nombre.value)">Mostrar saludo</button>
+
+<input #email type="email" (input)="emailCambiado(email.value)" value="{{miEmail}}" />
+<input type="tel" [(ngModel)]="telefono" />
+<button (click)="verTelefono()">Ver telefono</button>
+
+<img [src]="obtenerUrl()" />
+<img src="{{obtenerUrl()}}" />
+
+
