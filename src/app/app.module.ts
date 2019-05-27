@@ -10,6 +10,7 @@ import { UsuarioComponent } from './usuario.component';
 import { BotonComponent } from './boton.component';
 import { LineaFormularioComponent } from './linea-formulario.component';
 import { LoginComponent } from './login.component';
+import { UnlessDirective } from './unless.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LoginComponent } from './login.component';
     UsuarioComponent,
     BotonComponent,
     LineaFormularioComponent,
-    LoginComponent
+    LoginComponent,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,

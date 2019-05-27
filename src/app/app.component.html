@@ -7,6 +7,17 @@
     </button>
 </div>
 
+<button (click)="rellenarUsuario()">Rellenar Usuario</button>
+<p>
+    El usuario tiene el siguiente email: {{usuario?.email}}
+</p>
+
+<input type="checkbox" #cb (click)="cambiarValorMarcado(cb.checked)" />
+
+<div *appUnless="marcado">
+    No está marcado
+</div>
+
 <p>
     <ng-container *ngFor="let usuario of usuarios; index as i; first as esPrimero">
         {{esPrimero}} {{i}} {{usuario.email}}: {{usuario.password}}

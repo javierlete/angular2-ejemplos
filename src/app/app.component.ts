@@ -9,6 +9,10 @@ import { Usuario } from './usuario';
 export class AppComponent {
   title = 'pruebas <script>alert("hola");</script>';
 
+  usuario: Usuario;
+
+  marcado = false;
+
   usuarios: Usuario[] = [
     { email: 'email1', password: 'pass1' },
     { email: 'email2', password: 'pass2' },
@@ -43,5 +47,13 @@ export class AppComponent {
 
   onLogin(usuario: Usuario): void {
     console.log('APP COMPONENT', usuario);
+  }
+
+  cambiarValorMarcado(valor: boolean): void {
+    this.marcado = valor;
+  }
+
+  rellenarUsuario(): void {
+    this.usuario = { email: 'nuevo', password: 'pass' };
   }
 }
