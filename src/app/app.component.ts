@@ -20,6 +20,11 @@ export class AppComponent {
     fechaAlta: new Date()
   };
 
+  clasesAlerta = {
+    'alert-danger': this.tipoMensaje === 'error',
+    'alert-primary': this.tipoMensaje === 'normal'
+  };
+
   botonPulsado(evento: MouseEvent): void {
     evento.preventDefault();
     console.log(evento.offsetX, evento.offsetY);
