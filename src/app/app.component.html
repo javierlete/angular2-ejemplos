@@ -7,6 +7,12 @@
     </button>
 </div>
 
+<p>
+    <ng-container *ngFor="let usuario of usuarios; index as i; first as esPrimero">
+        {{esPrimero}} {{i}} {{usuario.email}}: {{usuario.password}}
+    </ng-container>
+</p>
+
 <app-login (login)="onLogin($event)"></app-login>
 
 <table>

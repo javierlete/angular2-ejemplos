@@ -9,6 +9,12 @@ import { Usuario } from './usuario';
 export class AppComponent {
   title = 'pruebas <script>alert("hola");</script>';
 
+  usuarios: Usuario[] = [
+    { email: 'email1', password: 'pass1' },
+    { email: 'email2', password: 'pass2' },
+    { email: 'email3', password: 'pass3' },
+  ];
+
   display = '';
 
   isBotonHabilitado = true;
