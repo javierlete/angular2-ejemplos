@@ -7,6 +7,8 @@
     </button>
 </div>
 
+<input #busqueda type="search" (keyup.enter)="onEnter(busqueda.value)" />
+
 <button (click)="rellenarUsuario()">Rellenar Usuario</button>
 <p>
     El usuario tiene el siguiente email: {{usuario?.email}}

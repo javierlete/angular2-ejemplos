@@ -56,4 +56,8 @@ export class AppComponent {
   rellenarUsuario(): void {
     this.usuario = { email: 'nuevo', password: 'pass' };
   }
+
+  onEnter(valor: string): void {
+    console.log(valor);
+  }
 }
