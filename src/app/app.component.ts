@@ -67,4 +67,9 @@ export class AppComponent {
   onEnter(valor: string): void {
     console.log(valor);
   }
+
+  modificarUsuarioInicial(): void {
+    this.usuarioInicial = new Usuario();
+    this.usuarioInicial.email = 'CAMBIADO';
+  }
 }

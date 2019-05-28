@@ -50,5 +50,7 @@
 <button [disabled]="!isBotonHabilitado" (click)="botonPulsado($event)">Ver evento</button>
 </form>
 
+<button (click)="modificarUsuarioInicial()">Modificar Usuario Inicial</button>
+
 <app-usuario [usuario]="usuarioInicial"></app-usuario>
 <app-hola></app-hola>
