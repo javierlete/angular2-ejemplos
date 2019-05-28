@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Usuario } from './usuario';
+import { Cliente } from './cliente';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,8 @@ export class AppComponent {
   title = 'pruebas <script>alert("hola");</script>';
 
   usuario: Usuario;
+
+  cliente: Cliente;
 
   marcado = false;
 
@@ -35,6 +38,10 @@ export class AppComponent {
     'alert-primary': this.tipoMensaje === 'normal'
   };
 
+  constructor() {
+    this.cliente = new Cliente();
+    this.cliente.nombreCompleto = 'James,Bond';
+  }
   botonPulsado(evento: MouseEvent): void {
     evento.preventDefault();
     console.log(evento.offsetX, evento.offsetY);

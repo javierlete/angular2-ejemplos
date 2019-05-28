@@ -7,6 +7,10 @@
     </button>
 </div>
 
+<div>
+    El cliente se llama: {{cliente.apellidos}}, {{cliente.nombreCompleto}}
+</div>
+
 <input #busqueda type="search" (keyup.enter)="onEnter(busqueda.value)" />
 
 <button (click)="rellenarUsuario()">Rellenar Usuario</button>
