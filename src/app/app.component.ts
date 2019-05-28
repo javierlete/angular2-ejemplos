@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Usuario } from './usuario';
 import { Cliente } from './cliente';
+import { UsuarioComponent } from './usuario.component';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,9 @@ import { Cliente } from './cliente';
 })
 export class AppComponent {
   title = 'pruebas <script>alert("hola");</script>';
+
+  @ViewChild(UsuarioComponent)
+  usuarioComponent: UsuarioComponent;
 
   usuario: Usuario;
 
