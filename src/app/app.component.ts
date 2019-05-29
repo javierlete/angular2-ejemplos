@@ -11,7 +11,7 @@ import { UsuarioComponent } from './usuario.component';
 export class AppComponent {
   title = 'pruebas <script>alert("hola");</script>';
 
-  @ViewChild(UsuarioComponent)
+  @ViewChild(UsuarioComponent, { static: true })
   usuarioComponent: UsuarioComponent;
 
   usuario: Usuario;

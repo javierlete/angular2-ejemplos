@@ -50,11 +50,14 @@
 <button [disabled]="!isBotonHabilitado" (click)="botonPulsado($event)">Ver evento</button>
 </form>
 
-<p>
-    {{appusuario.usuario.email}} {{usuarioComponent.usuario.password}}
-</p>
+
 
 <button (click)="modificarUsuarioInicial()">Modificar Usuario Inicial</button>
 
 <app-usuario #appusuario [usuario]="usuarioInicial"></app-usuario>
+
+<p>
+    {{appusuario.usuario.email}} {{usuarioComponent.usuario.password}}
+</p>
+
 <app-hola></app-hola>
